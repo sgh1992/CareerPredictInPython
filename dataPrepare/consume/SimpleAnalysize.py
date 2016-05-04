@@ -37,7 +37,6 @@ class simpleAnalysize:
 
     def plotPicture(self, location):
         seriesData = self.analysize()
-        plt.figure(figsize=(16,12))
-        seriesData.plot(kind='barh', title=self.attribute)
+        seriesData.plot(kind='barh', title=self.attribute,figsize=(16, 12))
         plt.savefig('%s/%s.pdf' % (location, self.attribute), dpi=199, bbox_inches='tight')
         plt.close()
